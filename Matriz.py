@@ -8,29 +8,37 @@ def jacobi(A, b, x0, tol, max_iter):
         x_new = np.zeros(n)
         for i in range(n):
             s = 0
+
             for j in range(n):
                 if j != i:
                     if abs(A[i,j] * x[j]) < float('inf'):
-                      s += A[i, j] * x[j]  
+                      s += A[i, j] * x[j]
                     else:
-                        print("Overflow!")
+                        
                         break
             x_new[i] = (b[i] - s) / A[i, i]
+
         if np.linalg.norm(x_new - x) < tol:
             return x_new
         x = x_new
+
     return x
 
 def gauss_seidel(A, b, x0, tol, max_iter):
     n = len(b)
     x = x0.copy()
+
     for k in range(max_iter):
         for i in range(n):
             s = 0
             for j in range(n):
                 if j != i:
                     s += A[i, j] * x[j]
+                else:
+                    break
+                
             x[i] = (b[i] - s) / A[i, i]
+            
         if np.linalg.norm(np.dot(A, x) - b) < tol:
             return x
     return x
@@ -48,6 +56,7 @@ def F_manual():
 
         b = np.zeros(N)
         b = b.astype(np.float64)
+
         for i in range(N):
             b[i] = float(input(f"b[{i}]: "))
 
@@ -55,13 +64,18 @@ def F_manual():
         print(x)
         x_exact = np.linalg.solve(A, b)           
 
+        # Escalar los coeficientes y el término independiente
+        scale = np.max(np.abs(A))
+        A_scaled = A / scale
+        b_scaled = b / scale
+
         x0 = np.zeros_like(b)
         x0 = x0.astype(np.float64) 
 
         tol = 1e-6
         max_iter = 1000
 
-        x_jacobi = jacobi(A, b, x0, tol, max_iter)
+        x_jacobi = jacobi(A_scaled, b_scaled, x0, tol, max_iter)
         x_gauss_seidel = gauss_seidel(A, b, x0, tol, max_iter)
 
         print("Solución exacta:", x_exact)
