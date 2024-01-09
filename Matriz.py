@@ -1,3 +1,5 @@
+#inicio del programa
+
 import sys
 import numpy as np
 
@@ -89,7 +91,7 @@ def F_manual():
     except ValueError as ve:
         print(f"Error: {ve}")
     except Exception as e:
-        print(f"Ocurrió un error inesperado: {e}")
+        print(f"Ocurrió un error inesperado,intente de nuevo: {e}")
 
 def F_automatica():
     try:
@@ -126,7 +128,7 @@ def F_automatica():
     except ValueError as ve:
         print(f"Error: {ve}")
     except Exception as e:
-        print(f"Ocurrió un error inesperado: {e}")
+        print(f"Ocurrió un error inesperado,intente de nuevo: {e}")
 
 def finPro():
     print("El programa ha finalizado correctamente")
@@ -143,5 +145,5 @@ if opcion == 1:
 if opcion == 2:
     F_automatica()
 
-
+#fin del programa
 

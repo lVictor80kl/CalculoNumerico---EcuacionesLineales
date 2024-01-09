@@ -1,3 +1,5 @@
+#inicio del programa
+
 import numpy as np
 
 # Funciones con Numpy
@@ -28,25 +30,25 @@ print("Suma con Numpy:", suma_numpy(a, b))
 if abs(suma_numpy(a, b) - suma_estandar) < 1e-10:
     print("La suma es correcta.")
 else:
-    print("Posible error en la suma.")
+    print("Posible error en la suma,por favor intentelo de nuevo")
 
 print("Resta con Numpy:", resta_numpy(a, b))
 if abs(resta_numpy(a, b) - resta_estandar) < 1e-10:
     print("La resta es correcta.")
 else:
-    print("Posible error en la resta.")
+    print("Posible error en la resta,por favor intentelo de nuevo.")
 
 print("Multiplicación con Numpy:", multiplicacion_numpy(a, b))
 if abs(multiplicacion_numpy(a, b) - multiplicacion_estandar) < 1e-10:
     print("La multiplicación es correcta.")
 else:
-    print("Posible error en la multiplicación.")
+    print("Posible error en la multiplicación,por favor intentelo de nuevo.")
 
 print("División con Numpy:", division_numpy(a, b))
 if abs(division_numpy(a, b) - division_estandar) < 1e-10:
     print("La división es correcta.")
 else:
-    print("Posible error en la división.")
+    print("Posible error en la división,por favor intentelo de nuevo.")
 
 
 
@@ -63,7 +65,7 @@ def division(A,B):
     return A/B
 
 A = float(input("Introduce un numero: "))
-B = float(input("Introduce otro numero: "))
+B = float(input("Introduce un segundo numero: "))
 
 SumaA_B = suma(A,B)
 print("El resultado de la suma → ",SumaA_B)
@@ -76,3 +78,5 @@ print("El resultado de la multiplicacion → ",MultiplicacionA_B)
 
 DivisionA_B = division(A,B)
 print("El resultado de la division → ",DivisionA_B)
+
+# fin del programa
