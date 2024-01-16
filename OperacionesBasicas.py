@@ -51,32 +51,4 @@ else:
     print("Posible error en la división,por favor intentelo de nuevo.")
 
 
-
-def suma(A,B):
-    return A + B
-
-def resta(A,B):
-    return A-B
-
-def multiplicacion(A,B):
-    return A*B
-
-def division(A,B):
-    return A/B
-
-A = float(input("Introduce un numero: "))
-B = float(input("Introduce un segundo numero: "))
-
-SumaA_B = suma(A,B)
-print("El resultado de la suma → ",SumaA_B)
-
-RestaA_B = resta(A,B)
-print("El resultado de la resta → ", RestaA_B)
-
-MultiplicacionA_B = multiplicacion(A,B)
-print("El resultado de la multiplicacion → ",MultiplicacionA_B)
-
-DivisionA_B = division(A,B)
-print("El resultado de la division → ",DivisionA_B)
-
 # fin del programa

@@ -145,4 +145,5 @@ if opcion == 1:
 if opcion == 2:
     F_automatica()
 
-#fin del programa
+
+
