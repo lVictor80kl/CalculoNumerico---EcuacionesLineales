@@ -1,3 +1,8 @@
+"""
+Universidad Jose Antonio Paéz
+Estudiantes: Victor Marcano, Gustavo Paéz, Andres Chavéz
+Profesora: Maria García - Calculo numérico
+"""
 #inicio del programa
 
 import sys
